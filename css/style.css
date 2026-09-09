@@ -1,0 +1,299 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #3564a8;
+}
+
+/* HEADER */
+
+header {
+  height: 67px;
+  background-color: #e5ecf8;
+}
+
+.header-content,
+.blog-header {
+  width: 80%;
+  height: 67px;
+  margin: auto;
+}
+
+header h1 {
+  margin: 0;
+  padding-top: 8px;
+  font-size: 45px;
+  color: #6494eb;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-header h1 {
+  padding: 0;
+}
+
+.blog-header a {
+  margin-right: 25px;
+}
+
+.logout {
+  color: darkred;
+}
+
+/* LOGIN + SIGN UP */
+
+.auth-main {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.login-box,
+.signup-box {
+  width: 370px;
+  background-color: #d9e5fc;
+  padding: 35px 30px;
+  border-radius: 14px;
+}
+
+.login-box h2,
+.signup-box h2 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: normal;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f7fc;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+button {
+  padding: 9px 15px;
+  border: 1px solid #3564a8;
+  background-color: white;
+  color: #3564a8;
+  cursor: pointer;
+}
+
+a {
+  color: #3564a8;
+  text-decoration: none;
+}
+
+/* MAIN BLOG */
+
+.blog-main,
+.explore-main {
+  width: 80%;
+  margin: auto;
+  padding-top: 35px;
+}
+
+.add-button {
+  font-size: 18px;
+}
+
+.explore-link {
+  float: right;
+  margin-top: 20px;
+}
+
+.latest {
+  text-align: center;
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+/* BLOG CARDS */
+
+.blog-row {
+  display: flex;
+  gap: 55px;
+  margin-bottom: 55px;
+}
+
+.blog-content {
+  width: 65%;
+  border: 1px solid #cbd6e8;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.blog-content h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-top: 5px;
+}
+
+.blog-content p {
+  font-size: 18px;
+  line-height: 1.5;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.blog-info {
+  width: 30%;
+  border: 1px solid #cbd6e8;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #222;
+}
+
+.blog-info p {
+  margin-bottom: 25px;
+}
+
+.update {
+  color: green;
+  border: 1px solid green;
+  padding: 6px 10px;
+}
+
+.delete {
+  color: red;
+  border: 1px solid red;
+  padding: 6px 10px;
+  margin-left: 10px;
+}
+
+/* ADD BLOG MODAL */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  width: 50%;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modal-content input {
+  border: 1px solid #aaa;
+}
+
+textarea {
+  width: 100%;
+  height: 220px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+select {
+  padding: 5px;
+}
+
+.modal-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+/* EXPLORE */
+
+.categories {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.categories a {
+  display: inline-block;
+  border: 1px solid #3564a8;
+  padding: 7px 10px;
+  margin: 5px;
+}
+
+.filter-form {
+  text-align: right;
+  margin-bottom: 35px;
+}
+
+.filter-form input {
+  display: none;
+}
+
+/* UPDATE PAGE */
+
+.update-main {
+  width: 60%;
+  margin: 50px auto;
+}
+
+.update-box {
+  border: 1px solid #cbd6e8;
+  padding: 30px;
+}
+
+.update-box textarea {
+  margin-bottom: 20px;
+}
+.comments-box {
+  width: 100%;
+  margin-top: 40px;
+  border: 1px solid #cbd6e8;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.comments-box h2 {
+  text-align: center;
+}
+
+.comment {
+  padding: 15px 0;
+  border-top: 1px dotted #cbd6e8;
+}
+
+.comment strong {
+  color: #3564a8;
+}
+
+.comments-box textarea {
+  width: 100%;
+  height: 90px;
+  margin-top: 20px;
+}
