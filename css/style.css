@@ -5,8 +5,6 @@ body {
   color: #3564a8;
 }
 
-/* HEADER */
-
 header {
   background-color: #e5ecf8;
 }
@@ -43,7 +41,6 @@ header h1 {
   color: darkred;
 }
 
-/* LOGIN AND SIGN UP */
 
 .auth-main {
   display: flex;
@@ -104,8 +101,6 @@ a {
   margin-top: 25px;
 }
 
-/* MAIN BLOG */
-
 .blog-main,
 .explore-main {
   width: 80%;
@@ -128,8 +123,6 @@ a {
   font-weight: normal;
   margin: 70px 0;
 }
-
-/* BLOG CARDS */
 
 .blog-row {
   display: flex;
@@ -182,8 +175,6 @@ a {
   margin-left: 10px;
 }
 
-/* MODAL */
-
 .modal {
   display: none;
   position: fixed;
@@ -230,8 +221,6 @@ select {
   justify-content: flex-end;
 }
 
-/* EXPLORE */
-
 .categories {
   text-align: center;
   margin-bottom: 30px;
@@ -252,8 +241,6 @@ select {
 .filter-form input {
   display: none;
 }
-
-/* UPDATE PAGE */
 
 .update-main {
   width: 60%;
@@ -293,8 +280,6 @@ select {
   height: 90px;
   margin-top: 20px;
 }
-
-/* TABLET */
 
 @media (max-width: 900px) {
   .header-content,
