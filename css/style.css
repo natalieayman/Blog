@@ -8,14 +8,13 @@ body {
 /* HEADER */
 
 header {
-  height: 67px;
   background-color: #e5ecf8;
 }
 
 .header-content,
 .blog-header {
   width: 80%;
-  height: 67px;
+  min-height: 67px;
   margin: auto;
 }
 
@@ -44,12 +43,12 @@ header h1 {
   color: darkred;
 }
 
-/* LOGIN + SIGN UP */
+/* LOGIN AND SIGN UP */
 
 .auth-main {
   display: flex;
   justify-content: center;
-  padding-top: 70px;
+  padding: 70px 15px 0;
 }
 
 .login-box,
@@ -58,6 +57,7 @@ header h1 {
   background-color: #d9e5fc;
   padding: 35px 30px;
   border-radius: 14px;
+  box-sizing: border-box;
 }
 
 .login-box h2,
@@ -83,14 +83,6 @@ input {
   background-color: #f5f7fc;
 }
 
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 25px;
-}
-
 button {
   padding: 9px 15px;
   border: 1px solid #3564a8;
@@ -102,6 +94,14 @@ button {
 a {
   color: #3564a8;
   text-decoration: none;
+}
+
+.buttons,
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
 }
 
 /* MAIN BLOG */
@@ -126,8 +126,7 @@ a {
   text-align: center;
   font-size: 35px;
   font-weight: normal;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin: 70px 0;
 }
 
 /* BLOG CARDS */
@@ -138,11 +137,20 @@ a {
   margin-bottom: 55px;
 }
 
-.blog-content {
-  width: 65%;
+.blog-content,
+.blog-info {
   border: 1px solid #cbd6e8;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.blog-content {
+  width: 65%;
+}
+
+.blog-info {
+  width: 30%;
+  color: #222;
 }
 
 .blog-content h2 {
@@ -154,17 +162,7 @@ a {
 .blog-content p {
   font-size: 18px;
   line-height: 1.5;
-
-  overflow-wrap: break-word;
   word-break: break-word;
-}
-
-.blog-info {
-  width: 30%;
-  border: 1px solid #cbd6e8;
-  padding: 20px;
-  box-sizing: border-box;
-  color: #222;
 }
 
 .blog-info p {
@@ -184,7 +182,7 @@ a {
   margin-left: 10px;
 }
 
-/* ADD BLOG MODAL */
+/* MODAL */
 
 .modal {
   display: none;
@@ -200,9 +198,11 @@ a {
 .modal-content {
   background-color: white;
   width: 50%;
+  max-width: 700px;
   margin: 40px auto;
   padding: 25px;
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .close {
@@ -227,10 +227,7 @@ select {
 }
 
 .modal-buttons {
-  margin-top: 25px;
-  display: flex;
   justify-content: flex-end;
-  gap: 15px;
 }
 
 /* EXPLORE */
@@ -263,20 +260,20 @@ select {
   margin: 50px auto;
 }
 
-.update-box {
+.update-box,
+.comments-box {
   border: 1px solid #cbd6e8;
-  padding: 30px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .update-box textarea {
   margin-bottom: 20px;
 }
+
 .comments-box {
   width: 100%;
   margin-top: 40px;
-  border: 1px solid #cbd6e8;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .comments-box h2 {
@@ -293,7 +290,128 @@ select {
 }
 
 .comments-box textarea {
-  width: 100%;
   height: 90px;
   margin-top: 20px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .header-content,
+  .blog-header,
+  .blog-main,
+  .explore-main,
+  .update-main {
+    width: 90%;
+  }
+
+  .blog-row {
+    gap: 25px;
+  }
+
+  .blog-content {
+    width: 60%;
+  }
+
+  .blog-info {
+    width: 40%;
+  }
+
+  .modal-content {
+    width: 75%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content,
+  .blog-header,
+  .blog-main,
+  .explore-main,
+  .update-main {
+    width: 92%;
+  }
+
+  .blog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 0;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  .blog-header a {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .auth-main {
+    padding-top: 30px;
+  }
+
+  .login-box,
+  .signup-box {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .login-box h2,
+  .signup-box h2 {
+    font-size: 30px;
+  }
+
+  .blog-row {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 35px;
+  }
+
+  .blog-content,
+  .blog-info {
+    width: 100%;
+  }
+
+  .blog-content h2 {
+    font-size: 28px;
+  }
+
+  .blog-content p {
+    font-size: 16px;
+  }
+
+  .latest {
+    font-size: 28px;
+    margin: 40px 0;
+  }
+
+  .explore-link {
+    float: none;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .filter-form {
+    text-align: center;
+  }
+
+  .modal-content {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .buttons,
+  .modal-buttons {
+    flex-wrap: wrap;
+  }
+
+  .update-main {
+    margin-top: 30px;
+  }
+
+  textarea {
+    max-width: 100%;
+  }
 }
